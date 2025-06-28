@@ -139,7 +139,7 @@ npm run dist
 
 ## 📜 License
 
-MIT License © 2025 [Demoody](https://github.com/skwasimakram13)
+MIT License © 2025 [Sk Wasim Akram](https://github.com/skwasimakram13) & [Demoody](https://demoody.com)
 
 ---
 
