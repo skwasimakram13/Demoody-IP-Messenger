@@ -1,0 +1,44 @@
+{
+  "name": "demoody-ip-messenger",
+  "version": "1.0.0",
+  "description": "LAN-based chat and file sharing app for Windows (peer-to-peer, no internet required)",
+  "main": "main.js",
+  "author": "Demoody Official",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "keywords": [
+    "LAN",
+    "Messenger",
+    "Electron",
+    "Chat",
+    "File Sharing",
+    "Offline"
+  ],
+  "build": {
+    "appId": "com.demoody.ipmessenger",
+    "productName": "Demoody IP Messenger",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "deleteAppDataOnUninstall": true
+    }
+  },
+  "devDependencies": {
+    "electron": "^37.1.0",
+    "electron-builder": "^24.6.0"
+  }
+}

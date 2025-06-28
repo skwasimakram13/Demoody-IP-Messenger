@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LAN Group Chat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f6fa;
+      padding: 20px;
+      color: #333;
+    }
+
+    h2, h3 {
+      margin-top: 0;
+    }
+
+    #messages {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      height: 300px;
+      overflow-y: auto;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .message, .file-received, .file-sent {
+      margin-bottom: 10px;
+      padding: 8px 12px;
+      background: #f0f0f0;
+      border-radius: 6px;
+    }
+
+    #input, #file-send-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"], input[type="file"] {
+      flex: 1 1 200px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #0078D7;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #005fa3;
+    }
+
+    #peers {
+      margin-top: 20px;
+      padding: 10px;
+      background: #fff;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+
+    .peer {
+      padding: 6px;
+      cursor: pointer;
+      border-bottom: 1px solid #eee;
+    }
+
+    .peer:last-child {
+      border-bottom: none;
+    }
+
+    @media (max-width: 600px) {
+      #input, #file-send-section {
+        flex-direction: column;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h2>📡 LAN Group Chat</h2>
+  <div id="messages"></div>
+
+  <div id="input">
+    <input type="text" id="username" placeholder="Your name" />
+    <input type="text" id="message" placeholder="Type a message" />
+    <button onclick="send()">Send</button>
+  </div>
+
+  <h3>📁 Send File</h3>
+  <div id="file-send-section">
+    <input type="file" id="fileInput" />
+    <input type="text" id="targetIP" placeholder="Target IP (e.g. 192.168.0.5)" />
+    <!-- <button onclick="sendFile()">Send File</button> -->
+     <button id="sendBtn">Send</button>
+  </div>
+
+  <h3>🧑‍🤝‍🧑 Online Peers</h3>
+  <div id="peers"></div>
+
+  <script src="index.js"></script>
+</body>
+</html>
