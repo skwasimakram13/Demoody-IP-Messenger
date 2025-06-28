@@ -50,7 +50,7 @@ Demoody-IP-Messenger/
 ### 📦 Setup & Run (Development)
 
 ```bash
-git clone https://github.com/your-username/demoody-ip-messenger.git
+git clone https://github.com/skwasimakram13/demoody-ip-messenger.git
 cd demoody-ip-messenger
 
 npm install
